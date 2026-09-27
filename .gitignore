@@ -72,4 +72,7 @@ Testing/
 x64/
 Workbook02/Workbook02.vcxproj.filters
 Workbook02/Workbook02.vcxproj.user
+Workbook03/Workbook02/Workbook02.vcxproj.filters
+Workbook03/Workbook02/Workbook02.vcxproj.user
+
 Debug/
