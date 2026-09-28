@@ -158,9 +158,66 @@ const char* NameOf(DamageType type)
     }
 }
 
+const char* NameOf(ArmourType type)
+{
+    switch (type)
+    {
+    case ArmourType::None:
+        return "none";
+    case ArmourType::Leather:
+        return "leather";
+    case ArmourType::Chain:
+        return "chain";
+    case ArmourType::Plate:
+        return "plate";
+    }
+}
+
 void Problem04()
 {
+    int damage{ 20 };
+    DamageType damageType{ DamageType::Fire };
+    ArmourType armourType{ ArmourType::Plate };
 
+    int damageTaken{ ApplyResistance(damage, damageType, armourType) };
+    std::cout << std::format("{} {} damage against {} becomes {}\n", damage, NameOf(damageType), NameOf(armourType), damageTaken);
+
+    damageType = DamageType::Pysical;
+    armourType = ArmourType::Chain;
+
+    damageTaken = ApplyResistance(damage, damageType, armourType);
+    std::cout << std::format("{} {} damage against {} becomes {}\n", damage, NameOf(damageType), NameOf(armourType), damageTaken);
+}
+
+enum class Command{ MoveNorth, MoveSouth, Attack, Wait, Quit};
+
+void HandleCommand(Command command)
+{
+    switch (command)
+    {
+        case Command::MoveNorth:
+            std::cout << "   You move north.\n";
+            break;
+        case Command::MoveSouth:
+            std::cout << "   You move south.\n";
+            break;
+        case Command::Attack:
+            std::cout << "   You attack!\n";
+            break;
+        case Command::Wait:
+            std::cout << "   You wait.\n";
+            break;
+        case Command::Quit:
+            std::cout << "   You Quit.\n";
+            break;
+    }
+}
+
+void Problem05()
+{
+    HandleCommand(Command::MoveNorth);
+    HandleCommand(Command::Attack);
+    HandleCommand(Command::Quit);
 }
 
 int main() 
@@ -168,6 +225,7 @@ int main()
 	//Problem01();
 	//Problem02();
     //TryToCastSpell(true, 5, 10, false);
-    Problem04();
+    //Problem04();
+    Problem05();
 	return 0;
 }
