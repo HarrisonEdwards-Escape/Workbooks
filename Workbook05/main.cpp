@@ -56,9 +56,32 @@ void Problem03()
     Broken4();
 }
 
+constexpr int RoomWidth{ 12 };
+constexpr int RoomHeight{ 6 };
+
+void Problem04()
+{
+    for (int i = 0; i < RoomHeight; ++i)
+    {
+        for (int j = 0; j < RoomWidth; ++j)
+        {
+            if (j == 0 || j == RoomWidth - 1 || i == 0 || i == RoomHeight - 1)
+            {
+                std::cout << '#';
+            }
+            else
+            {
+                std::cout << '.';
+            }
+        }
+        std::cout << '\n';
+    }
+}
+
 int main()
 {
 	//Problem01();
     //Problem03();
+    Problem04();
 	return 0;
 }
