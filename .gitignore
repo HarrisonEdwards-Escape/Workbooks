@@ -71,23 +71,7 @@ Testing/
 .vs/
 x64/
 
-Workbook02/Workbook02.vcxproj.filters
-Workbook02/Workbook02.vcxproj.user
-
-Workbook03/Workbook02/Workbook02.vcxproj.filters
-Workbook03/Workbook02/Workbook02.vcxproj.user
-
-Workbook04/Workbook04.vcxproj.filters
-Workbook04/Workbook04.vcxproj.user
-
-Workbook05/Workbook05.vcxproj.filters
-Workbook05/Workbook05.vcxproj.user
-
-Workbook06/Workbook06.vcxproj.filters
-Workbook06/Workbook06.vcxproj.user
-
-Workbook07/Workbook07.vcxproj.filters
-Workbook07/Workbook07.vcxproj.user
-
+*.vcxproj.user
+*.vcxproj.filters
 
 Debug/
